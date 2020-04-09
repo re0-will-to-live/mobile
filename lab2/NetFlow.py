@@ -6,11 +6,6 @@ i = 0
 filename = "D:\DEV\mobile\lab2\data.csv"
 #file = input("Enter path to CDR file: ")
 
-sms_sum = 0  
-out_calls_sum = 0
-inc_calls_sum = 0
-
-#number = 915642913
 #number = input("Enter IP address: ")
 number = "192.168.250.59"
 #first 1000#b for free
@@ -40,13 +35,11 @@ with open(filename, 'r') as csvfile:
     #
     # calculating incoming calls tariffication
     for row in rows[1:17450]:
-        #if row[3].find(number) != -1:
         if row[3] == number:
             total_traffic = total_traffic + int(row[12])
             total_occurences = total_occurences + 1
             #print(int(row[12]))
             traflist += {(row[1], row[12])}
-        #if row[4].find(number) != -1:
         if row[4] == number:
             total_traffic = total_traffic + int(row[12])
             total_occurences = total_occurences + 1
@@ -54,7 +47,6 @@ with open(filename, 'r') as csvfile:
             traflist += {(row[1], row[12])}
     c = ""
     # total price
-    #total_price = sms_price+out_calls_price+inc_calls_price
     if total_traffic < 1000:
         c = "bytes"
         total_cost = (total_traffic*1000-1000)*1/1000000000
