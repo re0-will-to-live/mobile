@@ -1,3 +1,4 @@
+A python 3 script to calculate a price for services documented in the .csv database
 Eng
 
 1. 	Launch CDR.py using python 3.8.2
@@ -7,7 +8,8 @@ Eng
 4.	Get total price
 
 If you have any quesions, feel free to contact me: pogchampre0@gmail.com
-
+______________________________________________________________________________________________________________
+Скрипт на python 3 для расчета стоимости услуг, записанных в .csv
 Рус
 
 1.	Запустите CDR.py при помощи python 3.8.2
